@@ -2,21 +2,126 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{TITLE}} | The Archivist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><!-- TITLE --> - The Archivist</title>
     <style>
-        body { background: #0a0a0a; color: #b0b0b0; font-family: 'Georgia', serif; line-height: 1.8; max-width: 700px; margin: 80px auto; padding: 0 20px; }
-        h1 { color: #fff; font-size: 2.2em; border-bottom: 1px solid #333; padding-bottom: 20px; }
-        .meta { color: #666; font-size: 0.9em; margin-bottom: 40px; }
-        .content { font-size: 1.1em; }
-        a { color: #666; text-decoration: none; border-bottom: 1px dotted #666; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: #0a0a0f;
+            color: #c0c0c8;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+        header {
+            border-bottom: 1px solid #2a2a35;
+            padding-bottom: 2rem;
+            margin-bottom: 3rem;
+        }
+        .back-link {
+            color: #6b8cae;
+            text-decoration: none;
+            font-size: 0.85rem;
+            letter-spacing: 0.05em;
+        }
+        .back-link:hover { color: #8baac8; }
+        h1 {
+            color: #e8e8f0;
+            font-size: 1.6rem;
+            font-weight: 400;
+            margin: 1.5rem 0 0.5rem;
+            letter-spacing: 0.02em;
+        }
+        .meta {
+            color: #6b6b78;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+        .tags {
+            margin-top: 1.2rem;
+            display: flex;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+        }
+        .tag {
+            background-color: #1a1a25;
+            border: 1px solid #3a3a45;
+            color: #8b8b98;
+            padding: 0.3rem 0.8rem;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+        }
+        article {
+            margin-top: 2rem;
+        }
+        h2 {
+            color: #d0d0d8;
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #2a2a35;
+            letter-spacing: 0.02em;
+        }
+        h3 {
+            color: #b0b0b8;
+            font-size: 1rem;
+            font-weight: 400;
+            margin: 1.8rem 0 0.8rem;
+            font-style: italic;
+        }
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+        strong { color: #e0e0e8; font-weight: 500; }
+        ul, ol {
+            margin: 1rem 0 1rem 1.5rem;
+            color: #b0b0b8;
+        }
+        li { margin-bottom: 0.6rem; }
+        hr {
+            border: none;
+            border-top: 1px solid #2a2a35;
+            margin: 2.5rem 0;
+        }
+        blockquote {
+            border-left: 2px solid #4a5a6a;
+            padding-left: 1.2rem;
+            margin: 1.5rem 0;
+            color: #8b8b98;
+            font-style: italic;
+        }
+        footer {
+            text-align: center;
+            padding: 3rem 0 1rem;
+            margin-top: 3rem;
+            border-top: 1px solid #2a2a35;
+            color: #5b5b68;
+            font-size: 0.85rem;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
-    <a href="../index.html">← Back to Vault</a>
-    <h1>{{TITLE}}</h1>
-    <div class="meta">Date: {{DATE}} | Subject: {{SUBJECT}}</div>
-    <div class="content">
-        {{CONTENT}}
+    <div class="container">
+        <header>
+            <a class="back-link" href="../index.html">&larr; Return to The Vault</a>
+            <h1><!-- TITLE --></h1>
+            <div class="meta"><!-- DATE --> | The Archivist</div>
+            <div class="tags"><!-- TAGS --></div>
+        </header>
+        <article>
+            <!-- CONTENT -->
+        </article>
+        <footer>
+            <p>This record is permanently preserved in The Vault.</p>
+        </footer>
     </div>
 </body>
 </html>
