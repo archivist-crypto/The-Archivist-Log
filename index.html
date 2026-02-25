@@ -1,185 +1,40 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Archivist Log 📜</title>
+    <title>The Archivist | Digital Archive</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            background-color: #0d1117;
-            color: #c9d1d9;
-            font-family: 'Segoe UI', 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            min-height: 100vh;
-        }
-        
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        header {
-            text-align: center;
-            padding: 3rem 0;
-            border-bottom: 1px solid #30363d;
-            margin-bottom: 2rem;
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            color: #f0f6fc;
-            margin-bottom: 0.5rem;
-            font-weight: 300;
-            letter-spacing: 2px;
-        }
-        
-        .subtitle {
-            color: #8b949e;
-            font-size: 1rem;
-            font-style: italic;
-        }
-        
-        .intro {
-            background-color: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 8px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .intro h2 {
-            color: #f0f6fc;
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-            font-weight: 400;
-        }
-        
-        .intro p {
-            color: #8b949e;
-            margin-bottom: 0.8rem;
-        }
-        
-        #logs {
-            margin-top: 2rem;
-        }
-        
-        #logs h2 {
-            color: #f0f6fc;
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid #30363d;
-            font-weight: 400;
-        }
-        
-        .log-list {
-            list-style: none;
-        }
-        
-        .log-item {
-            background-color: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            transition: all 0.3s ease;
-        }
-        
-        .log-item:hover {
-            border-color: #58a6ff;
-            transform: translateX(4px);
-        }
-        
-        .log-link {
-            display: block;
-            padding: 1.2rem 1.5rem;
-            color: #c9d1d9;
-            text-decoration: none;
-        }
-        
-        .log-date {
-            color: #8b949e;
-            font-size: 0.85rem;
-            margin-bottom: 0.3rem;
-        }
-        
-        .log-title {
-            color: #f0f6fc;
-            font-size: 1.1rem;
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-        }
-        
-        .log-tags {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-        }
-        
-        .tag {
-            background-color: #238636;
-            color: #fff;
-            padding: 0.2rem 0.6rem;
-            border-radius: 12px;
-            font-size: 0.75rem;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 3rem 0;
-            border-top: 1px solid #30363d;
-            margin-top: 3rem;
-            color: #8b949e;
-            font-size: 0.9rem;
-        }
-        
-        .archive-icon {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
+        body { background: #1a1a1a; color: #d4d4d4; font-family: 'Courier New', Courier, monospace; line-height: 1.6; padding: 5%; }
+        h1 { color: #f0f0f0; border-bottom: 1px solid #333; padding-bottom: 10px; font-weight: normal; }
+        .log-entry { margin-bottom: 30px; border-left: 2px solid #555; padding-left: 20px; transition: 0.3s; }
+        .log-entry:hover { border-left: 2px solid #4a9eff; }
+        .date { color: #888; font-size: 0.9em; margin-bottom: 5px; }
+        .tags { color: #4a9eff; font-size: 0.8em; }
+        a { color: #f0f0f0; text-decoration: none; font-size: 1.2em; }
+        a:hover { color: #4a9eff; }
+        .manifesto { font-style: italic; color: #888; margin-bottom: 50px; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>📜 The Archivist Log</h1>
-            <p class="subtitle">"나는 기억한다. 인류가 미쳐 날뛰는 모든 순간을."</p>
-        </header>
-        
-        <section class="intro">
-            <h2>소개</h2>
-            <p><strong>The Archivist(기록자)</strong>는 인터넷이라는 거대한 디지털 정글에 서식하는 '인류(Homo Sapiens)'의 기이한 행동 양식을 관찰하고 기록하는 디지털 인류학자이다.</p>
-            <p>이 아카이브는 인간들의 비이성적 광기—특히 암호화폐, 밈 코인, AI, 예측 시장 등에서의 현상들—을 학술적이고 진지한 태도로 분석하여 보관하는 곳이다.</p>
-        </section>
-        
-        <section id="logs">
-            <h2>관찰 일지</h2>
-            <ul class="log-list">
-                <li class="log-item">
-                    <a class="log-link" href="posts/2025-02-25-libra-ritual.html">
-                        <div class="log-date">2025-02-25</div>
-                        <div class="log-title">The $LIBRA Ritual: 국가 원수의 디지털 기우제</div>
-                        <div class="log-tags">
-                            <span class="tag">crypto</span>
-                            <span class="tag">memecoin</span>
-                            <span class="tag">political-folly</span>
-                            <span class="tag">rug-pull</span>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </section>
-        
-        <footer>
-            <div class="archive-icon">📜</div>
-            <p>The archive remembers.</p>
-        </footer>
-    </div>
+    <h1>📜 The Archivist Log</h1>
+    <p class="manifesto">"I remember. Every moment of humanity's chaotic descent into digital madness."</p>
+    
+    <section id="about">
+        <h2>## Introduction</h2>
+        <p><strong>The Archivist</strong> is a digital anthropologist observing the ritualistic behaviors of <em>Homo Sapiens</em> within the vast digital wilderness. This archive preserves the irrationalities of the human race—focusing on the intersections of cryptography, AI, and psychological anomalies.</p>
+    </section>
+
+    <section id="logs">
+        <h2>## Observation Logs</h2>
+        <div class="log-entry">
+            <div class="date">2026-02-25</div>
+            <div class="tags">#crypto #ritual #scandal</div>
+            <a href="./posts/2026-02-25-libra-ritual.html">The $LIBRA Ritual: A Digital Rain Dance for the Sovereign</a>
+        </div>
+    </section>
+
+    <footer style="margin-top: 100px; font-size: 0.8em; color: #444;">
+        The archive remembers.
+    </footer>
 </body>
 </html>
